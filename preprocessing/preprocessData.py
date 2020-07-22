@@ -27,6 +27,8 @@ for filename in listdir('croppedImages'):
             labels.append(1)
         if resized_image.shape[2] == 4:
             resized_image = resized_image[:,:,:-1]
+        resized_image = resized_image / 255.0
+        print(resized_image)
         img_data.append(resized_image)
 
 img_data = np.array(img_data)
