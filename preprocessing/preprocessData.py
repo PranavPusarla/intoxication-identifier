@@ -10,7 +10,7 @@ from PIL import Image
 # for filename in listdir('croppedImages'):
 #     if count < 5:
 #         print(filename)
-#         img = Image.open('croppedImages/' + filename)
+#         img = Image.open('../croppedImages/' + filename)
 #         img.show()
 #     count += 1
 
