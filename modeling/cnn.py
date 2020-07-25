@@ -27,7 +27,6 @@ datagen = ImageDataGenerator(rotation_range=15,
                              fill_mode='nearest',
                              validation_split=0.2)
 '''
-
 datagen = ImageDataGenerator(rescale=1/255.0, validation_split=0.2)
 train_data_generator = datagen.flow_from_directory(directory='dataset',
                                                    target_size = (img_width, img_height),
