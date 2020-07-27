@@ -18,8 +18,9 @@ img_data = []
 labels = []
 for filename in listdir('croppedImages'):
     if filename[0] == 'd':
-        img = cv2.imread('croppedImages/' + filename)
-        resized_image = cv2.resize(img, dsize=(128,128), interpolation=cv2.INTER_CUBIC)
+        img = Image.open('croppedImages/' + filename)
+        data = np.asarray(img)
+        resized_image = cv2.resize(data, dsize=(128,128), interpolation=cv2.INTER_CUBIC)
         if filename[8] == '0' or filename[8] == '1':
             labels.append(0)
         else:

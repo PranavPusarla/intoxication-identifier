@@ -22,5 +22,6 @@ for filename in listdir('../croppedImages'):
         img_data.append(resized_image)
 
 img_data = np.array(img_data)
+
 np.save('mirrored_labels', labels)
 np.save('mirrored_ImageData', img_data)
